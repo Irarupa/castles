@@ -1,9 +1,8 @@
-class Box {
+class Triangle {
   constructor(x,y,width,height) {
     var options = {
-        'restitution':0,
-        'friction':6,
-        'density':20
+      isStatic: true
+
     }
     this.body = Bodies.rectangle(x,y,width,height, options);
     this.width = width;
@@ -17,8 +16,12 @@ class Box {
     translate(pos.x,pos.y);
     rotate(this.body.angle);
     rectMode(CENTER);
-    fill("red");
+    strokeWeight(4);
+    stroke("red");
+   
+    fill("black");
     rect(0, 0, this.width, this.height);
     pop();
   }
 }
+
